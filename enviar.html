@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload</title>
+  <link rel="stylesheet" href="enviar.css">
+</head>
+
+<body>
+  
+  <div id="div">
+    <form id="form" action="https://formsubmit.co/scaio5428@gmail.com" method="post">
+      <input type="hidden" name="_subject" value="Novo upload!">
+      <input type="hidden" name="_captcha" value="false">
+      <h3>Link do vídeo</h3>
+      <input id="linkInput" type="text" name="video" placeholder="Insira o link do vídeo..." onkeyup="verificaLink()" required>
+      <br><br>
+      <h3>E-mail para avisos:</h3>
+      <input id="inputEmail" type="email" placeholder="Seu e-mail..." value="" required>
+      <input type="hidden" name="_autoresponse" value="Nós analisaremos o seu link!">
+      <br>
+      <div id="aviso"></div>
+      <button onclick="concluir()" type="submit">Concluir</button>
+    </form>
+  </div>
+  
+ <script>
+   function verificaLink() {
+     var input = document.getElementById("linkInput").value.toLowerCase();
+     
+     var aviso = document.getElementById("aviso");
+
+     if (input.includes("youtube") || input.includes("youtube.com") || input.includes("youtu.be")) {
+       aviso.innerHTML = "Vídeo encontrado!";
+       aviso.style.backgroundColor = "greenyellow";
+       aviso.style.color = "black";
+       aviso.style.padding = "10px";
+       aviso.style.fontWeight = "bold";
+     } else {
+       aviso.innerHTML = "Seu link não é válido";
+       aviso.style.fontWeight = "bold";
+       aviso.style.backgroundColor = "red";
+       aviso.style.color = "white";
+       aviso.style.padding = "10px";
+     }
+     if (input == "") {
+       
+       aviso.style.display = "none"
+       
+     } else {
+       
+       aviso.style.display = "block"
+       
+       
+     }
+   }
+
+   function concluir() {
+     var input = document.getElementById("linkInput").value.toLowerCase();
+     var div = document.getElementById("div");
+     var aviso = document.getElementById("aviso");
+     if (input.includes("youtube") || input.includes("youtube.com") || input.includes("youtu.be")) {
+       div.innerHTML = `<h2>Enviado com sucesso!</h2>
+       <h5>Vamos analisar seu link e se ele estiver Ok aparecerá no aplicativo</h5>
+       
+       `;
+       setTimeout(function() {
+         window.location.href = "index.html";
+       }, 3000);
+     } else {
+       aviso.innerHTML = "Por favor, insira um link válido do YouTube.";
+       aviso.style.fontWeight = "bold";
+       aviso.style.backgroundColor = "red";
+       aviso.style.color = "white";
+       aviso.style.padding = "10px";
+     }
+   }
+ </script>
+<script>
+  var acessando = window.location.href;
+  console.log(acessando)
+  var form = document.getElementById("form")
+  
+  form.addEventListener("submit", function(e) {
+    
+    e.preventDefault()
+    
+  })
+  
+  
+</script>
+<script src="info.js">info.js</script>
+</body>
+
+</html>

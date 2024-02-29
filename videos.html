@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>assistindo</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+</head>
+<body>
+<iframe id="video" src="https://www.youtube.com/embed/fz66Qj6mUlQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<script>
+  
+  var sorteio = Math.floor(Math.random()*3)+1
+  var video = document.getElementById("video")
+  if (sorteio === 2) {
+    
+    //musica de daniel:
+    video.src = "https://www.youtube.com/embed/d74m5B0fKFA"
+    setTimeout(()=> {
+  saldo = saldo + 5
+  localStorage.setItem("saldo",saldo)
+  },5000)
+  }
+  if (sorteio === 3) {
+    
+    //inaki godoy:
+    
+    video.src = "https://www.youtube.com/embed/rBsxjPmeFIg"
+    
+    setTimeout(() => {
+      saldo = saldo + 5
+      localStorage.setItem("saldo", saldo)
+    }, 10000)
+  }
+video.muted = true; // Para garantir que o vídeo seja reproduzido automaticamente mesmo com o som desativado
+video.play();
+  
+</script>
+<script src="info.js">inf</script>
+</body>
+</html>

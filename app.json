@@ -1,0 +1,16 @@
+{
+  "name": "TUBER CM",
+  "short_name": "Tuber CM",
+  "description": "/",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/hTo0Gnl.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+
+body {
+  padding: 10px;
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#div {
+  
+  background-color: white;
+  padding: 1rem;
+  margin-top: 50%;
+  font-size: 25px;
+  border-radius: 10px;
+  
+  
+  
+}
+
+input {
+  
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  
+  
+}
+
+button {
+  
+background-color: greenyellow;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  margin: 10px;
+  
+  
+}

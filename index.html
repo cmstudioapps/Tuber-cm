@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tuber CM</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="manifest" href="app.json">
+</head>
+<body>
+  
+  
+  <header>
+    
+    <div id="logo">
+      
+      <h2>TCM</h2>
+      
+      
+    </div>
+      <div id="moedass">
+      
+    </div>
+    <br><br>
+ <p>Tuber CM é uma plataforma de divulgação onde os usuários divulgam seus canais no YouTube e perfis do Instagram.</p>
+    
+    
+  </header>
+  
+  <dialog id="login">
+    <form id="form" action="https://formsubmit.co/conteudogeek5428@gmail.com" method="post">
+ <h3>Digite seu nome e e-mail:</h3>
+ 
+ <input id="nome" name="nome" type="text" placeholder="Seu nome aqui..." required>
+    <br><br>
+    
+    <input id="email" name="email" type="email" placeholder="Seu e-mail aqui..." required>
+    <br><br>
+  <button id="submit" type="submit" onclick="finalizar()">Continuar</button>
+  
+    </form>
+  </dialog>
+  <br>
+  <h3>DESTAQUES:</h3>
+  <section id="videos">
+    
+    <iframe id="daniel" src="https://www.youtube.com/embed/CJia3REkn0k" frameborder="0"></iframe>
+    
+    <iframe src="https://www.youtube.com/embed/vwHzWVvOXxo" frameborder="0">#</iframe>
+    
+    <iframe src="https://www.youtube.com/embed/fz66Qj6mUlQ" frameborder="0">#</iframe>
+  </section>
+  <p>Entre em contato com o suporte para colocar seu video nos destaques.</p>
+  <section>
+    
+    
+    
+    <span id="enviar" onclick="enviar()">Enviar video</span>
+    
+    <br>
+    
+    <span id="ver" onclick="ver()">Assistir mais videos</span>
+    
+    
+    
+    
+    
+  </section>
+  
+
+  
+  
+  <script>
+    
+    
+    if (navigator.connection) {
+      var connectionType = navigator.connection.effectiveType;
+      if (connectionType === '4g' || connectionType === '3g') {
+        
+        console.log('O usuário está usando dados móveis.');
+      } else {
+        carregarConteudo()
+        console.log('O usuário está usando Wi-Fi ou uma conexão fixa.');
+      }
+    } else {
+      console.log('A API navigator.connection não está disponível.');
+    }
+    
+    function carregarConteudo() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'url_do_seu_arquivo.html', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('conteudoContainer').innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+}
+    
+  </script>
+  
+  <script src="recompensas.js">recompensas.js</script>
+  <script src="info.js">info.js</script>
+  <script src="login.js">login.js</script>
+  <script src="main.js">main.js</script>
+</body>
+</html>
