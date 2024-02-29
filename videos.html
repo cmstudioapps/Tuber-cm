@@ -22,7 +22,7 @@
 <iframe id="video" src="https://www.youtube.com/embed/fz66Qj6mUlQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <script>
-  
+  var saldo = parseInt(localStorage.getItem("saldo"))
   var sorteio = Math.floor(Math.random()*3)+1
   var video = document.getElementById("video")
   if (sorteio === 2) {
@@ -31,7 +31,7 @@
     video.src = "https://www.youtube.com/embed/d74m5B0fKFA"
     setTimeout(()=> {
   saldo = saldo + 5
-  localStorage.setItem("saldo",saldo)
+  localStorage.setItem("saldo",saldo.toString())
 
   alert("A recompensa foi enviada")
   },5000)
@@ -46,7 +46,7 @@
     
     setTimeout(() => {
       saldo = saldo + 5
-      localStorage.setItem("saldo", saldo)
+      localStorage.setItem("saldo", saldo.toString())
 alert("A recompensa foi enviada")
     }, 10000)
   }
