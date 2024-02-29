@@ -54,3 +54,13 @@ background-color: greenyellow;
   
   
 }
+
+#Lembrete {
+
+background-color: yellow;
+color: black;
+border-radius: 20px;
+box-shadow: 4px 8px 13px yellow;
+padding: 10px;
+
+}
