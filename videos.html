@@ -23,7 +23,7 @@
 
 <script>
   var saldo = parseInt(localStorage.getItem("saldo"))
-  var sorteio = Math.floor(Math.random()*4)+1
+  var sorteio = Math.floor(Math.random()*5)+1
   var video = document.getElementById("video")
 
 window.addEventListener("load",function() {
@@ -65,6 +65,22 @@ alert("A recompensa foi enviada")
 
 
 }
+
+if (sorteio == 5) {
+
+video.src = "https://www.youtube.com/embed/BZlWw78qB80"
+setTimeout(() => {
+      saldo = saldo + 5
+      localStorage.setItem("saldo", saldo.toString())
+alert("A recompensa foi enviada")
+    }, 10000)
+
+
+}
+
+
+
+
 })
 video.muted = true; // Para garantir que o vídeo seja reproduzido automaticamente mesmo com o som desativado
 video.play();
