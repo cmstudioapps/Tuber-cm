@@ -15,15 +15,15 @@ function verr() {
 }
 
 function enviarr() {
-  if (saldo >= 10) {
+  if (saldo >= 20) {
 
-saldo = saldo - 10
+saldo = saldo - 20
 localStorage.setItem("saldo",saldo)
 
   window.location.href = "enviar.html"
   } else {
  
-alert("Você não tem saldo, assista videos!")
+alert("Você precisa de 20 moedas para enviar seu video!")
 
 }
 }
