@@ -20,6 +20,7 @@
       <h3>E-mail para avisos:</h3>
       <input id="inputEmail" type="email" placeholder="Seu e-mail..." value="" required>
       <input type="hidden" name="_autoresponse" value="Nós analisaremos o seu link!">
+      <input type="hidden" name="_next" value="https://cmstudioapps.github.io/Tuber-cm/confirmado.html">
       <br>
       <div id="aviso"></div>
       <button onclick="concluir()" type="submit">Concluir</button>
@@ -62,13 +63,8 @@
      var div = document.getElementById("div");
      var aviso = document.getElementById("aviso");
      if (input.includes("youtube") || input.includes("youtube.com") || input.includes("youtu.be")) {
-       div.innerHTML = `<h2>Enviado com sucesso!</h2>
-       <h5>Vamos analisar seu link e se ele estiver Ok aparecerá no aplicativo</h5>
        
-       `;
-       setTimeout(function() {
-         window.location.href = "index.html";
-       }, 3000);
+       
      } else {
        aviso.innerHTML = "Por favor, insira um link válido do YouTube.";
        aviso.style.fontWeight = "bold";
