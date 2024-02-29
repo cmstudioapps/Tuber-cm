@@ -14,7 +14,7 @@ function ver() {
   
 }
 
-var enviar = () => {
+function enviar() {
   if (saldo >= 10) {
 
 saldo = saldo - 10
