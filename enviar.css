@@ -13,9 +13,7 @@ body {
   text-align: center;
   height: 100%;
   width: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  
 }
 
 
@@ -27,6 +25,9 @@ body {
   margin-top: 50%;
   font-size: 25px;
   border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
   
   
   
