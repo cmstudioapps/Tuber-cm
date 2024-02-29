@@ -18,7 +18,7 @@ function enviarr() {
   if (saldo >= 10) {
 
 saldo = saldo - 10
-localStorage.setItem("saldo",saldo.toString)
+localStorage.setItem("saldo",saldo.toString())
 
   window.location.href = "enviar.html"
   } else {
