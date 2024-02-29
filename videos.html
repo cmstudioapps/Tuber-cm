@@ -23,9 +23,9 @@
 
 <script>
   var saldo = parseInt(localStorage.getItem("saldo"))
-  var sorteio = Math.floor(Math.random()*3)+1
+  var sorteio = Math.floor(Math.random()*4)+1
   var video = document.getElementById("video")
-  if (sorteio === 2) {
+  if (sorteio == 2) {
     
     //musica de daniel:
     video.src = "https://www.youtube.com/embed/d74m5B0fKFA"
@@ -38,7 +38,7 @@
 
 
   }
-  if (sorteio === 3) {
+  if (sorteio == 3) {
     
     //inaki godoy:
     
@@ -50,6 +50,14 @@
 alert("A recompensa foi enviada")
     }, 10000)
   }
+
+if (sorteio == 4) {
+
+video.src = "https://www.youtube.com/embed/-0-XONxZeaA"
+
+
+}
+
 video.muted = true; // Para garantir que o vídeo seja reproduzido automaticamente mesmo com o som desativado
 video.play();
   
