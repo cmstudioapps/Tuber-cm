@@ -26,10 +26,12 @@
 <input id="usu" type="text" name="Usuário">
       <br>
       <div id="aviso"></div>
-      <button onclick="concluir()" type="submit">Concluir</button>
+      <button id="carregar" onclick="concluir()" type="submit">Concluir</button>
     </form>
   </div>
-  
+  <dialog id="mostra">
+<h3>Carregando</h3>
+</dialog>
  <script>
    function verificaLink() {
      var input = document.getElementById("linkInput").value.toLowerCase();
@@ -87,6 +89,21 @@ usu.value = nome
   
   
   
+</script>
+
+<script>
+var mostra = document.getElementById("mostra")
+ var carregar = document.getElementById("carregar")
+
+carregar.addEventListener("click",function() {
+
+  mostra.showModal()
+
+})
+
+
+
+
 </script>
 <script src="info.js">info.js</script>
 </body>
