@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opção de Configuração</title>
+<style>
+    .config-div {
+        width: 200px;
+        height: 100px;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="config-div">
+    <button id="toggleButton">Ativar economia</button>
+</div>
+
+<script>
+    var dados = localStorage.getItem("dados") || 0; // Valor padrão é 0 se não houver nada no localStorage
+
+    document.getElementById("toggleButton").addEventListener("click", function() {
+        if (dados === "0") {
+            dados = "1";
+        } else {
+            dados = "0";
+        }
+        localStorage.setItem("dados", dados);
+    });
+</script>
+
+</body>
+</html>
