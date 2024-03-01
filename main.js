@@ -2,6 +2,13 @@ var dados = localStorage.getItem("dados")
 var saldo = parseInt(localStorage.getItem("saldo"))
 var divSaldo = document.getElementById("moedass")
 divSaldo.innerHTML = `<img src="https://i.imgur.com/2ZkJcuv.png" height="30px"> ${saldo}`
+var destaques = document.getElementById("videos")
+
+if (dados == 1) {
+
+  destaques.style.display = "none"
+ 
+}
 
 window.addEventListener("load", function() {
 (function(d, w, c) {
