@@ -39,3 +39,10 @@ alert("Você precisa de 20 moedas para enviar seu video!")
 }
 }
 
+
+function config() {
+
+window.location.href = "economia.html"
+
+}
+
