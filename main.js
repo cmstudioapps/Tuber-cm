@@ -6,6 +6,11 @@ var destaques = document.getElementById("videos")
 
 if (dados == 1) {
 
+        var iframes = document.getElementById("videos").getElementsByTagName("iframe");
+        for (var i = 0; i < iframes.length; i++) {
+            iframes[i].src = ""; // Define a src como uma string vazia para parar o carregamento
+        }
+    
   destaques.style.display = "none"
  
 }
