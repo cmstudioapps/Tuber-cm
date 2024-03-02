@@ -3,7 +3,7 @@ var saldo = parseInt(localStorage.getItem("saldo"))
 if (saldo === null) {
   
   saldo = 20
-  localStorage.setItem("saldo",saldo)
+  localStorage.setItem("saldo",saldo.toString())
   
 }
 
