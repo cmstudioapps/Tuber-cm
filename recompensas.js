@@ -1,6 +1,6 @@
 var Daniel = document.getElementById("daniel")
 var saldo = parseInt(localStorage.getItem("saldo"))
-if (saldo === null) {
+if (saldo === null || saldo == NaN) {
   
   saldo = 20
   localStorage.setItem("saldo",saldo.toString())
