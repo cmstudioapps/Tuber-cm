@@ -1,5 +1,5 @@
 var Daniel = document.getElementById("daniel")
-var saldo = parseInt(localStorage.getItem("saldo"))
+var saldo = parseInt(localStorage.getItem("saldo")|| 20)
 if (saldo === null || isNaN(saldo)) {
 alert("ocorreu um erro inesperado")
   
