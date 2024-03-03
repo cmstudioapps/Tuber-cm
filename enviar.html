@@ -23,16 +23,14 @@
       <h3>E-mail para avisos:</h3>
       <input id="inputEmail" type="email" placeholder="Seu e-mail..." value="" required>
       <input type="hidden" name="_autoresponse" value="Nós analisaremos o seu link!">
-      <input type="hidden" name="_next" value="https://cmstudioapps.github.io/Tuber-cm/confirmado.html">
+      <input type="hidden" name="_next" value="confirmado.html">
 <input id="usu" type="text" name="Usuário">
       <br>
       <div id="aviso"></div>
       <button id="carregar" onclick="concluir()" type="submit">Concluir</button>
     </form>
   </div>
-  <dialog id="mostra">
-<h3>Carregando</h3>
-</dialog>
+  
  <script>
    function verificaLink() {
      var input = document.getElementById("linkInput").value.toLowerCase();
@@ -92,20 +90,8 @@ usu.value = nome
   
 </script>
 
-<script>
-var mostra = document.getElementById("mostra")
- var carregar = document.getElementById("carregar")
-
-carregar.addEventListener("click",function() {
-
-  mostra.showModal()
-
-})
 
 
-
-
-</script>
 <script src="info.js">info.js</script>
 </body>
 
