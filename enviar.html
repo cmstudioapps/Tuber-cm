@@ -67,6 +67,10 @@
    }
 
    function concluir() {
+var button = document.getElementById("carregar")
+button.innerHTML = "Carregando..."
+button.style.backgroundColor = "purple"
+button.style.color = "white"
      var input = document.getElementById("linkInput").value.toLowerCase();
      var div = document.getElementById("div");
      var aviso = document.getElementById("aviso");
