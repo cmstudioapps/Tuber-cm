@@ -2,7 +2,13 @@ var dados = localStorage.getItem("dados")
 var saldo = parseInt(localStorage.getItem("saldo"))
 var divSaldo = document.getElementById("moedass")
 divSaldo.innerHTML = `<img src="https://i.imgur.com/2ZkJcuv.png" height="30px"> ${saldo}`
+var data = new Date()
+var dia = data.getDate()
+var diaAnterior = localStorage.getItem("anterior") || 0
+var limite = localStorage.getItem("limite") || 0
+
 var destaques = document.getElementById("videos")
+
 
 if (dados == 1) {
 
@@ -39,10 +45,30 @@ function verr() {
 }
 
 function enviarr() {
-  if (saldo >= 20) {
+  
+  if (dia != diaAnterior) {
+  
+  diaAnterior = dia
+  localStorage.setItem("anterior",diaAnterior)
+  
+  limite = 0
+  localStorage.setItem("limite",limite)
+  
+  if (limite >= 3) {
+  alert("Você atingiu o limite diário! volte amanhã.")
+} else {
+  
+  limite++
+  localStorage.setItem("limite",limite)
+  
+}
+  
+  if (saldo >= 20 && limite < 3) {
 
 saldo = saldo - 20
 localStorage.setItem("saldo",saldo)
+
+
 
   window.location.href = "enviar.html"
   } else {
@@ -50,14 +76,41 @@ localStorage.setItem("saldo",saldo)
 alert("Você precisa de 20 moedas para enviar seu video!")
 
 }
+
+} 
+  
+  
+
+
 }
 
 function Insta() {
   
-  if (saldo >= 35) {
+  if (dia != diaAnterior) {
+  diaAnterior = dia
+  localStorage.setItem("anterior",diaAnterior)
+  
+  limite = 0
+  localStorage.setItem("limite",limite)
+  
+  if (limite >= 3) {
+      
+      alert("Você atingiu o limite diário! Volte amanhã.")
+      
+    } else {
+      
+      limite++
+      localStorage.setItem("limite",limite)
+      
+    }
+  
+  if (saldo >= 35 && limite < 3) {
     
     saldo = saldo - 35
     localStorage.setItem("saldo",saldo)
+    
+    
+    
     window.location.href = "insta.html"
     
   } else {
@@ -65,13 +118,13 @@ function Insta() {
     alert("Você precisa de 35 moedas...")
     
   }
-  
+  }
   
 }
 
 
 function config() {
-
+if (nome == "Caio") {
 window.location.href = "economia.html"
-
+}
 }
