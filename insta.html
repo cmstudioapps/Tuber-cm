@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload insta | Tuber CM</title>
+  
+  <style>
+    
+    body {
+    background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    text-align: center;
+}
+    div {
+      
+      text-align: center;
+     background-color: white;
+      border-radius: 20px;
+      box-shadow: 4px 8px 13px white;
+      width: 80%;
+      color: black;
+      padding: 20px;
+      margin-top: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
+      
+      
+    }
+    
+    input,button,textarea {
+      
+      margin: 5px;
+      background-color: lightgray;
+      border-radius: 20px;
+      padding: 7px;
+      
+    }
+    button {
+      
+      width: 30%;
+      
+      
+    }
+    #image {
+      
+      width: 80%;
+      
+      
+    }
+    
+    h4 {
+      
+      background-color: blue;
+      color: white;
+      border-radius: 20px;
+      padding: 20px;
+      
+      
+    }
+  </style>
+</head>
+
+<body>
+
+<h4>Coloque seu perfil nos destaques onde mais tem visualização! para fazer isso clique em "fale conosco" e peça para pôr seu perfil nos destaques!</h4>
+  
+ <div>
+  <img src="https://i.imgur.com/KR25guK.png" alt="Instagram_icon (1).png" height="50px">
+   <form action="https://formsubmit.co/scaio5428@gmail.com" method="post" enctype="multipart/form-data">
+     
+    <h3>Link do perfil:</h3>
+     <input type="text" placeholder="Link do seu perfil..." name="Link do perfil" required>
+     
+  <h3>Imagem de perfil:</h3>
+     <input type="file" accept="image/*" name="Foto para Perfil" id="image" required>
+     
+     <textarea name="Descrição do perfil" id="" cols="25" rows="5" placeholder="Descreva seu perfil" required></textarea>
+     
+     <input type="hidden" name="_subject" value="TUBER CM: upload instagram">
+     
+     
+     <input type="hidden" name="_next" value="https://cmstudioapps.github.io/Tuber-cm/confirmado.html">
+     
+     <button id="confirmar" type="submit" value="Confirmar">Confirmar</button>
+   </form>
+
+ </div>
+
+
+
+
+<script>
+  
+  var confirmar = document.getElementById("confirmar")
+  
+  confirmar.addEventListener("click",()=> {
+    
+    confirmar.innerHTML = "AGUARDE..."
+    confirmar.style.backgroundColor = "greenyellow"
+     confirmar.style.fontWeight = "bold"
+    
+    setTimeout(()=> {
+      
+      confirmar.innerHTML = "Confirmar"
+      
+      
+    },30000)
+    
+  })
+  
+</script>
+</body>
+
+</html>
