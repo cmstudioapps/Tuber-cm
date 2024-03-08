@@ -10,9 +10,9 @@ if (dados == 1) {
         for (var i = 0; i < iframes.length; i++) {
             iframes[i].src = ""; // Define a src como uma string vazia para parar o carregamento
         }
-    
+
   destaques.style.display = "none"
- 
+
 }
 
 window.addEventListener("load", function() {
@@ -27,15 +27,15 @@ window.addEventListener("load", function() {
     })
 
 function verr() {
-  
-  
+
+
   window.location.href = "videos.html"
-  
-    
-    
-    
-  
-  
+
+
+
+
+
+
 }
 
 function enviarr() {
@@ -46,10 +46,27 @@ localStorage.setItem("saldo",saldo)
 
   window.location.href = "enviar.html"
   } else {
- 
+
 alert("Você precisa de 20 moedas para enviar seu video!")
 
 }
+}
+
+function Insta() {
+  
+  if (saldo >= 35) {
+    
+    saldo = saldo - 35
+    localStorage.setItem("saldo",saldo)
+    window.location.href = "insta.html"
+    
+  } else {
+    
+    alert("Você precisa de 35 moedas...")
+    
+  }
+  
+  
 }
 
 
@@ -58,4 +75,3 @@ function config() {
 window.location.href = "economia.html"
 
 }
-
