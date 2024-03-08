@@ -10,38 +10,38 @@
    <link rel="manifest" href="app.json">
 </head>
 <body>
-  
-  
+
+
   <header>
-    
+
     <div id="logo">
-      
+
       <h2>TCM</h2>
-      
-      
+
+
     </div>
       <div id="moedass">
-      
+
     </div>
- 
-   
+
+
     <br><br>
  <p>Tuber CM é uma plataforma de divulgação onde os usuários divulgam seus canais no YouTube e perfis do Instagram.</p>
-    
-    
+
+
   </header>
-  
+
   <dialog id="login">
     <form id="form" action="https://formsubmit.co/conteudogeek5428@gmail.com" method="post">
  <h3>Digite seu nome e e-mail:</h3>
- 
+
  <input id="nome" name="nome" type="text" placeholder="Seu nome aqui..." required>
     <br><br>
-    
+
     <input id="email" name="email" type="email" placeholder="Seu e-mail aqui..." required>
     <br><br>
   <button id="submit" type="submit" onclick="finalizar()">Continuar</button>
-  
+
     </form>
   </dialog>
 <br>
@@ -49,40 +49,42 @@
   <br>
   <h3>DESTAQUES:</h3>
   <section id="videos">
-    
+
     <iframe id="daniel" src="https://www.youtube.com/embed/CJia3REkn0k" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
-    
+
     <iframe src="https://www.youtube.com/embed/vwHzWVvOXxo" frameborder="0" sandbox="allow-same-origin allow-scripts">#</iframe>
-    
+
     <iframe src="https://www.youtube.com/embed/fz66Qj6mUlQ" frameborder="0" sandbox="allow-same-origin allow-scripts">#</iframe>
   </section>
   <p>Entre em contato com o suporte para colocar seu video nos destaques.</p>
   <section>
-    
-    
-    
-    <span id="enviar" onclick="enviarr()">Enviar video</span>
-    
-    <br>
-    
-    <span id="ver" onclick="verr()">Assistir mais videos</span>
-    
-    
-    
-    
-    
-  </section>
-  
 
-  
-  
+<button id="insta" onclick="Insta()">Enviar instagram</button>
+
+    <button id="enviar" onclick="enviarr()">Enviar video</button>
+
+    
+
+    <button id="ver" onclick="verr()">Assistir mais videos</button>
+
+    
+    
+    
+
+
+
+  </section>
+
+
+
+
   <script>
-    
-    
+
+
     if (navigator.connection) {
       var connectionType = navigator.connection.effectiveType;
       if (connectionType === '4g' || connectionType === '3g') {
-        
+
         console.log('O usuário está usando dados móveis.');
       } else {
         carregarConteudo()
@@ -91,7 +93,7 @@
     } else {
       console.log('A API navigator.connection não está disponível.');
     }
-    
+
     function carregarConteudo() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'url_do_seu_arquivo.html', true);
@@ -102,7 +104,7 @@
     };
     xhr.send();
 }
-    
+
   </script>
    <script>
     // Embaralhar iframes dentro da seção "videos" quando a página for carregada
@@ -126,7 +128,7 @@
     }
   </script>
   <script src="recompensas.js">recompensas.js</script>
-  
+
   <script src="login.js">login.js</script>
   <script src="main.js">main.js</script>
 </body>
