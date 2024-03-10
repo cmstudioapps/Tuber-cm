@@ -159,7 +159,7 @@ function insta() {
 
 
 function config() {
-if (nome == "Caio") {
+if (nome.includes("Caio")) {
 window.location.href = "economia.html"
 }
 }
