@@ -124,3 +124,40 @@ if (nome == "Caio") {
 window.location.href = "economia.html"
 }
 }
+
+function enviarTik() {
+if (limite >= 3) {
+      
+      alert("Você atingiu o limite diário! Volte amanhã.")
+      
+    }
+  
+  if (dia != diaAnterior) {
+  diaAnterior = dia
+  localStorage.setItem("anterior",diaAnterior)
+  
+  limite = 0
+  localStorage.setItem("limite",limite)
+    
+  
+  }
+  
+  if (saldo >= 35 && limite < 3) {
+    
+    saldo = saldo - 35
+    localStorage.setItem("saldo",saldo)
+    
+    limite++
+      localStorage.setItem("limite",limite)
+    
+    window.location.href = "tik.html"
+    
+  } 
+  
+  if (saldo < 35) {
+    
+    alert("Você precisa de 35 moedas...")
+    
+  }
+  
+}
