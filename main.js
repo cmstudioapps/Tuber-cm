@@ -136,7 +136,11 @@ function insta() {
     
   
   }
-  
+  if (saldo < 35) {
+    
+    alert("Você precisa de 35 moedas...")
+    
+  }
   if (saldo >= 35 && limite < 3) {
     
     saldo = saldo - 35
@@ -149,11 +153,7 @@ function insta() {
     
   } 
   
-  if (saldo < 35) {
-    
-    alert("Você precisa de 35 moedas...")
-    
-  }
+  
   
 }
 
@@ -180,7 +180,11 @@ if (limite >= 3) {
     
   
   }
-  
+  if (saldo < 35) {
+    
+    alert("Você precisa de 35 moedas...")
+    
+  }
   if (saldo >= 35 && limite < 3) {
     
     saldo = saldo - 35
@@ -193,10 +197,6 @@ if (limite >= 3) {
     
   } 
   
-  if (saldo < 35) {
-    
-    alert("Você precisa de 35 moedas...")
-    
-  }
+  
   
 }
