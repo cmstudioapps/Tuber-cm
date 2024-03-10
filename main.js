@@ -6,7 +6,8 @@ var data = new Date()
 var dia = data.getDate()
 var diaAnterior = localStorage.getItem("anterior") || 0
 var limite = localStorage.getItem("limite") || 0
-
+var ontem = localStorage.getItem("ontem")
+var recompensas = parseInt(localStorage.getItem("recompensas") || 0)
 var destaques = document.getElementById("videos")
 
 
@@ -43,6 +44,44 @@ function verr() {
 
 
 }
+
+
+
+
+
+
+function recom() {
+  if (recompensas > 0) {
+    
+    alert("Sua recompensa ja foi entregue, volte amanhã.")
+    
+    
+  }
+  if (dia != ontem) {
+    
+    ontem = dia
+    localStorage.setItem("ontem",ontem)
+    
+    recompensas = 0
+    localStorage.setItem("recompensas",recompensas)
+  }
+  
+  if (recompensas < 1) {
+    
+    recompensas++
+    localStorage.setItem("recompensas",recompensas)
+    
+    saldo = saldo + 25
+    localStorage.setItem("saldo",saldo)
+    alert("Parabéns você ganhou +25 moedas graças aos perfis do tik tok.")
+  console.log(saldo)
+  
+  }
+  
+  
+  
+}
+
 
 function enviarr() {
   if (limite >= 3) {
