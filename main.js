@@ -45,15 +45,6 @@ function verr() {
 }
 
 function enviarr() {
-  
-  if (dia != diaAnterior) {
-  
-  diaAnterior = dia
-  localStorage.setItem("anterior",diaAnterior)
-  
-  limite = 0
-  localStorage.setItem("limite",limite)
-  
   if (limite >= 3) {
   alert("Você atingiu o limite diário! volte amanhã.")
 } else {
@@ -62,8 +53,21 @@ function enviarr() {
   localStorage.setItem("limite",limite)
   
 }
+  if (dia != diaAnterior) {
   
-  if (saldo >= 20 && limite < 3) {
+  diaAnterior = dia
+  localStorage.setItem("anterior",diaAnterior)
+  
+  limite = 0
+  localStorage.setItem("limite",limite)
+  
+}
+if (saldo < 20) {
+
+alert("Você precisa de 20 moedas para enviar seu video!")
+
+} 
+if (saldo >= 20 && limite < 3) {
 
 saldo = saldo - 20
 localStorage.setItem("saldo",saldo)
@@ -71,27 +75,16 @@ localStorage.setItem("saldo",saldo)
 
 
   window.location.href = "enviar.html"
-  } else {
+  }
 
-alert("Você precisa de 20 moedas para enviar seu video!")
 
-}
-
-} 
   
   
 
 
 }
 
-function Insta() {
-  
-  if (dia != diaAnterior) {
-  diaAnterior = dia
-  localStorage.setItem("anterior",diaAnterior)
-  
-  limite = 0
-  localStorage.setItem("limite",limite)
+function insta() {
   
   if (limite >= 3) {
       
@@ -104,6 +97,16 @@ function Insta() {
       
     }
   
+  if (dia != diaAnterior) {
+  diaAnterior = dia
+  localStorage.setItem("anterior",diaAnterior)
+  
+  limite = 0
+  localStorage.setItem("limite",limite)
+    
+  
+  }
+  
   if (saldo >= 35 && limite < 3) {
     
     saldo = saldo - 35
@@ -113,11 +116,12 @@ function Insta() {
     
     window.location.href = "insta.html"
     
-  } else {
+  } 
+  
+  if (saldo < 35) {
     
     alert("Você precisa de 35 moedas...")
     
-  }
   }
   
 }
