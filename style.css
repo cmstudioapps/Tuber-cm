@@ -73,17 +73,21 @@ margin-top: 10px;
 
 #insta {
   
-  
-  background-color: white;
+  background: linear-gradient(to left, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+  font-weight: bold;
+  color: white;
+
   font-size: 25px;
 
 padding: 10px;
 border-radius: 10px;
 margin-top: 10px;
-  
+white-space: nowrap;
+border: none;
+  box-shadow: 2px 4px 8px blueviolet;
 }
 
-#videos {
+#videos, #tiktok {
   
   overflow-x: auto;
   white-space: nowrap;
@@ -118,4 +122,26 @@ input {
     
   }
       
+      
+      #tiktok img {
+        
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: solid 4px #5433FF;
+        
+      }
     
+
+#tik {
+  
+  background: linear-gradient(135deg, #EE1D52, #5433FF);
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+border: none;
+box-shadow: 3px 4px 8px purple;
+padding: 10px;
+border-radius: 10px;
+
+}
