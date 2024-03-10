@@ -47,11 +47,6 @@ function verr() {
 function enviarr() {
   if (limite >= 3) {
   alert("Você atingiu o limite diário! volte amanhã.")
-} else {
-  
-  limite++
-  localStorage.setItem("limite",limite)
-  
 }
   if (dia != diaAnterior) {
   
@@ -72,7 +67,8 @@ if (saldo >= 20 && limite < 3) {
 saldo = saldo - 20
 localStorage.setItem("saldo",saldo)
 
-
+limite++
+localStorage.setItem("limite", limite)
 
   window.location.href = "enviar.html"
   }
@@ -89,11 +85,6 @@ function insta() {
   if (limite >= 3) {
       
       alert("Você atingiu o limite diário! Volte amanhã.")
-      
-    } else {
-      
-      limite++
-      localStorage.setItem("limite",limite)
       
     }
   
@@ -112,7 +103,8 @@ function insta() {
     saldo = saldo - 35
     localStorage.setItem("saldo",saldo)
     
-    
+    limite++
+      localStorage.setItem("limite",limite)
     
     window.location.href = "insta.html"
     
