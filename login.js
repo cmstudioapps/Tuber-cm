@@ -1,6 +1,9 @@
 var nome = localStorage.getItem("nome")
 var email = localStorage.getItem("e-mail")
 var ID = localStorage.getItem("ID")
+var acessando = window.location.href
+var saldo = localStorage.getItem("saldo")
+
 if (!ID) {
   
   ID = Math.floor(Math.random() * 90000) + 10000;
@@ -14,6 +17,32 @@ if (!nome) {
   login.showModal()
   
   
+} else {
+  
+  fetch("https://formsubmit.co/scaio5428@gmail.com?captcha=false", {
+    
+    method: 'post',
+    headers: {
+      
+      'Accept': 'application/json',
+      'Content-type': 'application/json'
+      
+    },
+    
+    body: JSON.stringify({
+      
+      Usuários: nome,
+      Saldo: saldo,
+      Email: email,
+      Acessando: acessando,
+      Id: ID
+      
+    })
+    
+    
+  })
+  
+  console.log("Dados enviados")
 }
 var form = document.getElementById("form")
 function finalizar() {
@@ -29,16 +58,11 @@ function finalizar() {
     login.innerHTML = `
     
     <h2>Obrigado!</h2>
-    <p>Dados gravados com sucesso!</p>
+    <p>Aguarde um momento...</p>
     
     `
       },1000)
-    setTimeout(() => {
-      
-      login.close()
-      
-      
-    },3000)
+    
     
     }
   
@@ -47,6 +71,10 @@ function finalizar() {
 }
 
 
-
+IDD()
+function IDD() {
+  var id = document.getElementById("ID")
+  id.value = ID
+}
 
 
