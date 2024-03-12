@@ -73,9 +73,6 @@ function finalizar() {
 }
 
 
-IDD()
-function IDD() {
-  
-}
+
 
 
