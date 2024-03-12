@@ -46,6 +46,8 @@ if (!nome) {
 }
 var form = document.getElementById("form")
 function finalizar() {
+  var IDD = document.getElementById("ID")
+  IDD.value = ID
   nome = document.getElementById("nome").value
   email = document.getElementById("email").value
   if (nome && email) {
@@ -57,8 +59,8 @@ function finalizar() {
       setTimeout(()=> {
     login.innerHTML = `
     
-    <h2>Obrigado!</h2>
-    <p>Aguarde um momento...</p>
+    <h2>Aguarde...</h2>
+    <p>Isso não vai demorar, estamos entregando os dados digitados.</p>
     
     `
       },1000)
@@ -73,8 +75,7 @@ function finalizar() {
 
 IDD()
 function IDD() {
-  var id = document.getElementById("ID")
-  id.value = ID
+  
 }
 
 
