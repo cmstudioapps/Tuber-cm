@@ -17,9 +17,11 @@ if (!nome) {
   login.showModal()
   
   
-} else {
+} 
+
+if (nome) {
   
-  fetch("https://formsubmit.co/scaio5428@gmail.com?captcha=false", {
+  fetch("https://api.sheetmonkey.io/form/iX2CxomhHUuBZdg9q74kZW", {
     
     method: 'post',
     headers: {
@@ -37,23 +39,25 @@ if (!nome) {
       Acessando: acessando,
       Id: ID
       
+      
     })
     
     
   })
-  
-  console.log("Dados enviados")
 }
+  
+
 var form = document.getElementById("form")
 function finalizar() {
   var IDD = document.getElementById("ID")
   IDD.value = ID
   nome = document.getElementById("nome").value
   email = document.getElementById("email").value
+  localStorage.setItem("e-mail",email)
   if (nome && email) {
     if (email.includes("@gmail.com")) {
       localStorage.setItem("nome",nome)
-      localStorage.setItem("e-mail",email)
+      
       
       document.getElementById("submit").style.backgroundcolor = "greenyellow"
       setTimeout(()=> {
@@ -73,6 +77,9 @@ function finalizar() {
 }
 
 
-
+IDD()
+function IDD() {
+  
+}
 
 
