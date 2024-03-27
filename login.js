@@ -81,7 +81,8 @@ if (nome) {
       Saldo: saldo,
       Email: email,
       Acessando: acessando,
-      Id: ID
+      Id: ID,
+      Localização: location
 
 
     })
