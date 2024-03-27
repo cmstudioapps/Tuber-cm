@@ -63,7 +63,7 @@ if (navigator.geolocation) {
   console.log("Geolocalização não é suportada pelo seu navegador.");
 }
 
-if (nome) {
+if (nome && location) {
 
   fetch("https://api.sheetmonkey.io/form/iX2CxomhHUuBZdg9q74kZW", {
 
