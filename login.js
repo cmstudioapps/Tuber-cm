@@ -3,16 +3,8 @@ var email = localStorage.getItem("e-mail")
 var ID = localStorage.getItem("ID")
 var acessando = window.location.href
 var saldo = localStorage.getItem("saldo")
-var resetar = localStorage.getItem("resetar")
-if (!resetar && nome) {
 
-  localStorage.clear()
-resetar = true
-localStorage.setItem("resetar",resetar)
-alert("Estamos com um problema no recebimento de dados, precisamos que digite-os mais uma vez...")
-  location.reload()
 
-}
 
 if (!ID) {
 
